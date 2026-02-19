@@ -1,0 +1,40 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# dbt
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Data files (raw artifacts - do not commit)
+data/raw/**
+
+# Dagster
+.dagster/
+storage/
+schedules/
+history/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Kaggle credentials (if placed locally)
+kaggle.json
+
+# Environment variables
+.env
