@@ -1,0 +1,10 @@
+dbt-core==1.6.9
+dbt-duckdb==1.6.2
+dagster
+dagster-dbt
+dagster-webserver
+duckdb
+pandas
+numpy
+faker
+kagglehub[pandas-datasets]
