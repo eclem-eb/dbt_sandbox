@@ -12,6 +12,7 @@ It will utilize public or generated datasets, duckDB, DBT, python, R, and dagste
 ### 1) Create a Python virtual environment
 
 ```bash
+cd dbt_sandbox
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -31,21 +32,20 @@ export KAGGLE_API_TOKEN="YOUR_TOKEN_HERE"
 
 ### 3) Land raw CSV artifacts from Kaggle
 
-This downloads the Kaggle datasets and land them into raw CSV artifacts `data/raw/...`.
+This downloads the Kaggle datasets and land them into raw CSV artifacts `data/source/...`.
 
 ```bash
-python scripts/load_raw_data.py
+python scripts/extract/extract_kaggle_to_csv_olist.py
 ```
 
-### 4) Load raw CSVs into DuckDB (creates `raw_*` schemas)
+### 4) Load source CSVs into DuckDB (creates `source_*` schemas)
 
-This creates a local DuckDB file `dev.duckdb` and loads the raw tables.
+Setup DuckDB and load the source tables.
 
 ```bash
-python scripts/load_olist_csvs_to_duckdb.py
+python scripts/load/load_csv_to_duckdb_olist.py
 ```
 
 ## Notes
 
-- `data/raw/**` is intentionally gitignored as to not commit raw Kaggle datasets.
-- If you rotate/regenerate your Kaggle API key, update `~/.kaggle/kaggle.json` (or your env var) accordingly.
+- `data/source/**` is intentionally gitignored as to not commit Kaggle datasets.
