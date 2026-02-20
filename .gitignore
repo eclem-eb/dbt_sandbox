@@ -17,8 +17,8 @@ logs/
 *.duckdb
 *.duckdb.wal
 
-# Data files (raw artifacts - do not commit)
-data/raw/**
+# Source data
+data/source/**
 
 # Dagster
 .dagster/
