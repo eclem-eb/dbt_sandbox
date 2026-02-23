@@ -53,6 +53,7 @@ python scripts/load/load_csv_to_duckdb_olist.py
 As of now only base models are built. You can run them to query them in DuckDB to begin exploring mart model ideas.
 
 ```bash
+dbt deps
 dbt run --select path:models/base  
 ```
 
