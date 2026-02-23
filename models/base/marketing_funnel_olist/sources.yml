@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: marketing_funnel_olist
+    schema: source_olist_marketing
+    tables:
+      - name: closed_deals
+      - name: marketing_qualified_leads
