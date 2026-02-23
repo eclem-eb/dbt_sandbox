@@ -27,6 +27,7 @@ schedules/
 history/
 
 # IDE
+.cursor/
 .vscode/
 .idea/
 *.swp
